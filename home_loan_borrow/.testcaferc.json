@@ -1,0 +1,27 @@
+{
+  "src": [
+    "tests/**/*.js",
+    "tests/**/*.feature"
+  ],
+  "browsers": [
+    "chrome"
+  ],
+  "concurrency": 1,
+  "reporter": [{
+    "name": "spec"
+  }, {
+    "name": "html",
+    "output": "results/report/home_loan_borrow-report.html"
+  }, {
+    "name": "xunit",
+    "output": "results/report/home_loan_borrow-report.xml"
+  }
+  ],
+  "screenshotPath": "results/screenshots",
+  "screenshotPathPattern": "${USERAGENT}/test-${TEST_INDEX}/${DATE}_${TIME}.png",
+  "takeScreenshotsOnFails": true,
+  "pageLoadTimeout": 5000,
+  "skipJsErrors": true,
+  "color": true,
+  "speed": 1
+}
