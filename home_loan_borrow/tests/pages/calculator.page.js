@@ -4,16 +4,16 @@ const Selector = require('testcafe').Selector;
 const calculatorPage = {
     pageUrl: config.calculatorUrl,
     elements: {
-        form:{
-            applicationTypeSingle: Selector('#application_type_single'),
-            applicationTypeJoint: Selector('#application_type_joint'),
-            numberOfDependants: Selector ('select[title="Number of dependants"]'),
-            propertyToBuyHome: Selector('#borrow_type_home'),
-            propertyToBuyInvestment: Selector('#borrow_type_investment'),
+        applicationTypeSingle: Selector('#application_type_single'),
+        applicationTypeJoint: Selector('#application_type_joint'),
+        numberOfDependants: Selector ('select[title="Number of dependants"]'),
+        propertyToBuyHome: Selector('#borrow_type_home'),
+        propertyToBuyInvestment: Selector('#borrow_type_investment'),
+        textBoxes:{
             yourIncome: Selector('input[aria-labelledby=\'q2q1\']'),
             yourOtherIncome: Selector('input[aria-labelledby=\'q2q2\']'),
-            // secApplicantIncome: Selector('input[aria-labelledby=\'q2q3\']'),
-            // secApplicantOtherIncome: Selector('input[aria-labelledby=\'q2q4\']'),
+            secApplicantIncome: Selector('input[aria-labelledby=\'q2q3\']'),
+            secApplicantOtherIncome: Selector('input[aria-labelledby=\'q2q4\']'),
             livingExpenses: Selector('input[aria-labelledby=\'q3q1\']'),
             currentHomeLoanRepayments: Selector('input[aria-labelledby=\'q3q2\']'),
             otherLoanRepayments: Selector('input[aria-labelledby=\'q3q3\']'),
@@ -27,5 +27,4 @@ const calculatorPage = {
     },
 
 };
-
 module.exports = calculatorPage;

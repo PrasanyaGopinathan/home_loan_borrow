@@ -2,11 +2,13 @@
   "name": "home_loan_borrow",
   "version": "0.0.0",
   "scripts": {
-    "e2e:all": "rm -rf home_loan_borrow/results && cd home_loan_borrow && gherkin-testcafe --tags $npm_package_config_tags"
+    "test": "rm -rf home_loan_borrow/results && cd home_loan_borrow && gherkin-testcafe --tags $npm_package_config_tags",
+    "test-windows": "rd /s /q \"home_loan_borrow/results\" || cd home_loan_borrow && node ../../node_modules/gherkin-testcafe/main.js --tags @calculator",
+    "test-remote": "rm -rf home_loan_borrow/results && cd home_loan_borrow && gherkin-testcafe --tags $npm_package_config_tags remote --qr-code"
   },
   "config": {
-    "env": "non-prod",
-    "tags": "@calculator"
+    "env": "prod",
+    "tags": "~@"
   },
   "private": true,
   "devDependencies": {
