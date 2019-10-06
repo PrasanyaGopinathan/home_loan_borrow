@@ -1,0 +1,18 @@
+{
+  "name": "home_loan_borrow",
+  "version": "0.0.0",
+  "scripts": {
+    "e2e:all": "rm -rf home_loan_borrow/results && cd home_loan_borrow && gherkin-testcafe --tags $npm_package_config_tags"
+  },
+  "config": {
+    "env": "non-prod",
+    "tags": "@calculator"
+  },
+  "private": true,
+  "devDependencies": {
+    "cucumber": "^5.1.0",
+    "gherkin-testcafe": "^2.4.1",
+    "testcafe": "1.5.0",
+    "testcafe-reporter-html": "^1.4.4"
+  }
+}
